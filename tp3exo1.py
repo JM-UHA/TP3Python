@@ -33,4 +33,18 @@ print(f"Nombre de valeurs supérieur à 15 inclus : {len([i for i in valeurs if 
 
 # d) Calcul et affichage du plus grand nombre N
 
+X = int(input("Veuillez saisir un nombre X supérieur à 1 : "))
+
+if X <= 1:
+    print("Veuillez saisir un nombre supérieur à 1.")
+else:
+    N = 0
+    somme = 0
+
+    while somme <= X:
+        N += 1
+        somme += N
+
+    resultat = N - 1
+    print(f"Le plus grand nombre N tel que ∑(N) <= {X} est {resultat}.")
 
