@@ -1,5 +1,3 @@
-import sys
-
 heure_debut = 0
 heure_fin = 0
 valid = False
@@ -18,8 +16,8 @@ while not valid:
 
 total_heures = [i for i in range(heure_debut, heure_fin)]
 
-total_heure_soir = len([i for i in total_heures if (0 <= i <= 7) or (17 <= i <= 24)])
-total_heure_jour = len([i for i in total_heures if (7 < i < 17)])
+total_heure_soir = len([i for i in total_heures if (0 < i < 7) or (17 <= i < 24)])
+total_heure_jour = len([i for i in total_heures if (7 <= i < 17)])
 
 prix_soir = total_heure_soir * 1
 prix_jour = total_heure_jour * 2
